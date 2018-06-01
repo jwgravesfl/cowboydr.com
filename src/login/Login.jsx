@@ -4,15 +4,7 @@ import { Route, Redirect, withRouter } from "react-router-dom";
 
 import styled from 'styled-components'
 
-const AuthButtonP = styled.p `
-    background-color: yellow;
-    width: 100px;
-    height: 30px;
-    position: fixed;
-    top: 5%;
-    right: 5%;
-    z-index: 9999;
-`
+
 
 const fakeAuth = {
   isAuthenticated: false,
@@ -25,6 +17,16 @@ const fakeAuth = {
     setTimeout(cb, 100);
   }
 };
+
+const AuthButtonP = styled.p `
+    background-color: yellow;
+    width: 200px;
+    height: 60px;
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    z-index: 9999;
+`
 
 export const AuthButton = withRouter(
   ({ history }) =>

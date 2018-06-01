@@ -21,7 +21,7 @@ export default class NavBar extends Component {
         <div>
           <ul>
             <li>
-              <Link to="/public">Public Page</Link>
+              <Link to="/home">Home</Link>
             </li>
             <li>
               <Link to="/contactform">Contact Form</Link>
