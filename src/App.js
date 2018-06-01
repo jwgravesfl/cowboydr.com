@@ -1,19 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+// CSS 
+import styled from 'styled-components'
+
+
+// Site Layout Components
+import Main from './routes/Main'
+
+// Styled Components
+
+const AppMainDiv = styled.div `
+  .navBar {
+    grid-area: navBar;
+    background-color: red;
+  }
+
+  .main {
+    grid-area: main;
+    background-color: yellow;
+    z-index: 1;
+  }
+
+      display: grid;
+        grid-template-areas:  "navBar"
+                              "main";
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 1fr;
+        min-height:100vh;
+        background-color: green;
+`
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <AppMainDiv className="">
+        <Main className="main"/>
+      </AppMainDiv>
     );
   }
 }
