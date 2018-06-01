@@ -21,7 +21,7 @@ export default class NavBar extends Component {
         <div>
           <ul>
             <li>
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/contactform">Contact Form</Link>

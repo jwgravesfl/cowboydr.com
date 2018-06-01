@@ -11,22 +11,15 @@ import NavBar from '../navbar/NavBar'
 import { Home } from '../pages/home/Home'
 import ContactForm from '../pages/contactForm/ContactForm'
 
+// Mobile Version Route Imports
+import MobileHome from '../pages/mobile/home/MobileHome'
+
 const DesktopVersion = styled.div `
-@media only screen and (min-width: 767px) {
-      /* For mobile phones: */
-      [class*="col-"] {
-          width: 100%;
-      }
-    }
+
 `
 
 const MobileVersion = styled.div `
-@media only screen and (max-width: 767px) {
-      /* For mobile phones: */
-      [class*="col-"] {
-          width: 100%;
-      }
-    }
+  min-height: 100vh;
 `
 
 export default class Main extends Component {
@@ -40,9 +33,7 @@ export default class Main extends Component {
   componentWillMount() {
     window.addEventListener('resize', this.handleWindowSizeChange);
   }
-  
-  // make sure to remove the listener
-  // when the component is not mounted anymore
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleWindowSizeChange);
   }
@@ -60,7 +51,7 @@ export default class Main extends Component {
             <DesktopVersion>
               <AuthButton />
               <NavBar />
-              <Route path="/home" component={Home} />
+              <Route exact path="/" component={Home} />
               <Route path="/login" component={Login} />
               <PrivateRoute path="/contactform" component={ContactForm} />
             </DesktopVersion>
@@ -71,7 +62,7 @@ export default class Main extends Component {
           <Router>
             <MobileVersion>
               Mobile Site Coming Soon
-              <Route path="/home" component={Home} />
+              <Route exact path="/" component={MobileHome} />
               <Route path="/login" component={Login} />
               <PrivateRoute path="/contactform" component={ContactForm} />
             </MobileVersion>

@@ -21,19 +21,13 @@ const AppMainDiv = styled.div `
     z-index: 1;
   }
 
-      display: grid;
-        grid-template-areas:  "navBar"
-                              "main";
-        grid-template-columns: 1fr;
-        grid-template-rows: 10vh 1fr;
-        min-height:100vh;
-        background-color: green;
+      
 `
 class App extends Component {
   render() {
     return (
       <AppMainDiv className="">
-        <Main className="main"/>
+        <Main />
       </AppMainDiv>
     );
   }
