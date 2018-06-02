@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
 
-import img from '../../assets/oldWestStreet.jpg'
+import img from '../../assets/waterTower.png'
 
 const LandingPageDiv = styled.div `
     min-height: 100vh;

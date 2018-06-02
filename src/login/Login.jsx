@@ -20,11 +20,9 @@ const fakeAuth = {
 
 const AuthButtonP = styled.p `
     background-color: yellow;
-    width: 200px;
-    height: 60px;
     position: fixed;
-    top: 5%;
-    right: 5%;
+    top: 0;
+    left: 1%;
     z-index: 9999;
 `
 
@@ -32,7 +30,7 @@ export const AuthButton = withRouter(
   ({ history }) =>
     fakeAuth.isAuthenticated ? (
       <AuthButtonP>
-        Welcome!{" "}
+        Welcome!{" J"}
         <button
           onClick={() => {
             fakeAuth.signout(() => history.push("/"));
@@ -42,7 +40,13 @@ export const AuthButton = withRouter(
         </button>
       </AuthButtonP>
     ) : (
-      <AuthButtonP>You are not logged in.</AuthButtonP>
+      <AuthButtonP>You are not logged in.<button
+      onClick={() => {
+        fakeAuth.authenticate(() => history.push("/"));
+      }}
+    >
+      Login
+    </button></AuthButtonP>
     )
 );
 
