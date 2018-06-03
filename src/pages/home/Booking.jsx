@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 import imgBG from '../../assets/hotelTrough.jpg'
-
 import imgBusCard from '../../assets/businessCard.jpg'
+
+import ContactForm from '../forms/ContactForm'
 
 const BookingDiv = styled.div `
     min-height: 70vh;
@@ -22,18 +24,27 @@ const BookingDiv = styled.div `
     height: 70vh;
     }
 
-    .bookingContactInformation {
+    .bookingGrid {
+        display: grid;
+        grid-template-columns: auto auto;
+  
+    }
+
+    .bookingGridCell {
         width: 50vw;
-        
         img {
             padding: 7vh 0;
             width: 75%;
         }
     }
 
-    .bookingContactInformation {
-        float: left;
+    .businessCard {
     }
+
+    .contactForm {
+    }
+
+   
 
 `
 
@@ -41,11 +52,13 @@ export const Booking = () =>
 
 <BookingDiv id="Booking">
     <div className="overlay">
-        <div className="bookingContactInformation" >
-            <img src={imgBusCard} alt="" />
-        </div>
-        <div className="bookingContactForm" >
-            Booking Contact Form
+        <div className="bookingGrid">
+            <ScrollAnimation delay={500} animateIn="fadeInLeft" className="bookingGridCell businessCard" >
+                <img src={imgBusCard} alt="" />
+            </ScrollAnimation>
+            <ScrollAnimation delay={1500} animateIn="fadeInRight" className="bookingGridCell contactForm" >
+                <ContactForm />
+            </ScrollAnimation>
         </div>
     </div>
 </BookingDiv>

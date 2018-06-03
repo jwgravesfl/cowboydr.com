@@ -10,7 +10,8 @@ import Main from './routes/Main'
 // Styled Components
 
 const AppMainDiv = styled.div `
-  
+  padding: 0;
+  margin: 0;
 
       
 `

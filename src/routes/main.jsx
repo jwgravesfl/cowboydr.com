@@ -12,7 +12,7 @@ import { Home } from '../pages/home/Home'
 import { Booking } from '../pages/home/Booking'
 
 
-import ContactForm from '../pages/contactForm/ContactForm'
+import ContactForm from '../pages/forms/ContactForm'
 
 
 

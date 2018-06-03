@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
 
 import styled from 'styled-components'
 
@@ -46,24 +45,21 @@ export default class NavBar extends Component {
   render() {
     return (
       <NavBarMainDiv>
-    
-          
-            <span className="cell">
-            <a href="#Home">Home</a>
-            </span>
-            <span className="cell">
-              <a href="#Booking">Booking</a>
-            </span>
-            <span className="cell">
-            <a href="#Bio">Band Bio</a>
-            </span>
-            <span className="cell">
-            <a href="#Demo">Band Demos</a>
-            </span>
-            <span className="cell">
-            <a href="#Press">Press</a>
-            </span>
-        
+        <span className="cell">
+          <a href="#Home">Home</a>
+        </span>
+        <span className="cell">
+          <a href="#Booking">Booking</a>
+        </span>
+        <span className="cell">
+          <a href="#Bio">Band Bio</a>
+        </span>
+        <span className="cell">
+          <a href="#Demo">Band Demos</a>
+        </span>
+        <span className="cell">
+          <a href="#Press">Press</a>
+        </span>
       </NavBarMainDiv>
     )
   }
