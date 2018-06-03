@@ -6,10 +6,15 @@ import {
 
 import styled from 'styled-components'
 
-import { Login, AuthButton, PrivateRoute} from '../login/Login'
+import { Login, PrivateRoute} from '../login/Login'
 import NavBar from '../navbar/NavBar'
 import { Home } from '../pages/home/Home'
+import { Booking } from '../pages/home/Booking'
+
+
 import ContactForm from '../pages/contactForm/ContactForm'
+
+
 
 // Mobile Version Route Imports
 import MobileHome from '../pages/mobile/home/MobileHome'
@@ -49,10 +54,10 @@ export default class Main extends Component {
         return (
           <Router>
             <DesktopVersion>
-              <AuthButton />
               <NavBar />
               <Route exact path="/" component={Home} />
               <Route path="/login" component={Login} />
+              <Route path="/booking" component={Booking} />
               <PrivateRoute path="/contactform" component={ContactForm} />
             </DesktopVersion>
           </Router>

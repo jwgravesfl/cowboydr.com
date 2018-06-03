@@ -8,23 +8,31 @@ const NavBarMainDiv = styled.div `
     position: fixed;
     top: 1%;
     right: 1%;
-    width: 50vw;
+    width: 40vw;
     border-top: .5vw solid white;
     border-bottom: .5vw solid white;
     padding: 1vw 0;
     font-size: 2vw;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Concert One', cursive;
     text-align: center;
-    
+    font-variant: small-caps;
+    text-shadow: .1vw .1vw #000000;
+    z-index: 9998;
           
     a,
     a:link,
-    a:visited,
-    a:hover,
-    a:active {
+    a:visited {
         color: white;
         text-decoration: none;
         font-weight: bold;
+    }
+
+    a:hover,
+    a:active {
+      color: black;
+        text-decoration: none;
+        font-weight: bold;
+        text-shadow: .1vw .1vw #FFFFFF;
     }
 
     
@@ -44,7 +52,7 @@ export default class NavBar extends Component {
               <Link to="/">Home</Link>
             </span>
             <span className="cell">
-              <Link to="/contactform">Booking</Link>
+              <Link to="/booking">Booking</Link>
             </span>
             <span className="cell">
               <Link to="/contactform">Band Bio</Link>
