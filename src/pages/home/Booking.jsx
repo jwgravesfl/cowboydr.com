@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import imgBG from '../../assets/oldWestStreet.jpg'
+import imgBG from '../../assets/hotelTrough.jpg'
 
 import imgBusCard from '../../assets/businessCard.jpg'
 
 const BookingDiv = styled.div `
-    background: rgba(0, 0, 255);
     min-height: 70vh;
     background-image: url(${imgBG});
     background-repeat: no-repeat;
@@ -15,7 +14,7 @@ const BookingDiv = styled.div `
     text-align: center;
 
     .overlay {
-    background-color: rgba(0, 0, 204, 0.65);
+    background-color: rgba(197, 209, 226, .8);
     position: relative;
     top: 0;
     left: 0;
@@ -40,7 +39,7 @@ const BookingDiv = styled.div `
 
 export const Booking = () => 
 
-<BookingDiv>
+<BookingDiv id="Booking">
     <div className="overlay">
         <div className="bookingContactInformation" >
             <img src={imgBusCard} alt="" />

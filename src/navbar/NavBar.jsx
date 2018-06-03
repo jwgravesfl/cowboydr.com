@@ -49,19 +49,19 @@ export default class NavBar extends Component {
     
           
             <span className="cell">
-              <Link to="/">Home</Link>
+            <a href="#Home">Home</a>
             </span>
             <span className="cell">
-              <Link to="/booking">Booking</Link>
+              <a href="#Booking">Booking</a>
             </span>
             <span className="cell">
-              <Link to="/contactform">Band Bio</Link>
+            <a href="#Bio">Band Bio</a>
             </span>
             <span className="cell">
-              <Link to="/contactform">Band Demos</Link>
+            <a href="#Demo">Band Demos</a>
             </span>
             <span className="cell">
-              <Link to="/contactform">Press</Link>
+            <a href="#Press">Press</a>
             </span>
         
       </NavBarMainDiv>

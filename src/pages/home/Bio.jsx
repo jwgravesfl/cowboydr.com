@@ -10,7 +10,7 @@ const BioDiv = styled.div `
 
 export const Bio = () => 
 
-<BioDiv>
+<BioDiv id="Bio">
     <div>
         <div>
             Bio

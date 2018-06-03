@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import imgBG from '../../assets/oldBoardedUpTown.png'
+import imgBG from '../../assets/boardedUpTown.jpg'
 
 const PressDiv = styled.div `
     background: rgba(0, 0, 255);
@@ -25,10 +25,10 @@ const PressDiv = styled.div `
 
 export const Press = () => 
 
-<PressDiv>
+<PressDiv id="Press">
     <div className="overlay">
         <div>
-            Video
+            Press
         </div>
     </div>
 </PressDiv>
