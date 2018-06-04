@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import "animate.css/animate.min.css";
+import "video-react/dist/video-react.css"
 
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';

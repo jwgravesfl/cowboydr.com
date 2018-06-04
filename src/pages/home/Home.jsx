@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import LandingPage from './LandingPage'
 import {Booking} from './Booking'
-import { Video } from './Video'
+import Video from './Video'
 import { Bio } from './Bio'
 import { Press } from './Press'
 
