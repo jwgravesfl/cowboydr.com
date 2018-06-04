@@ -9,19 +9,15 @@ const ContactFormMainSection = styled.section `
       width: 40vw;
       height: 54vh;
       margin-left: 5vw;
-      margin-top: 8vh;
+      margin-top: 1vh;
       border-radius: 1vh;
-      text-align: center;
 
       .bookingForm {
         width: 100%;
         height: 100%;
-        text-align: center;
       }
 
       .contactFormFormBody {
-        text-align: center;
-        width: 100%;
         padding-bottom: 2.5vh;
       }
 
@@ -29,35 +25,30 @@ const ContactFormMainSection = styled.section `
         
       }
 
-      .contactFormDiv {
-        padding-left: 2.3vw;
-        padding-right: 2.4vw;
-        padding-top: 2.5vh;
-        padding-bottom: 0vh;
-        text-align: center;
-      }
-
-
-
       .contactFormHeading {
         text-align: center;
         font-family: 'Carter One', cursive;
-        font-size: 3vw;
+        font-size: 2vw;
       }
 
       label {
         display: block;
+        padding-top: 1vh;
         font-family: 'Carter One', cursive;
         font-size: 1.5vw;
+        text-align: left;
       }
 
       input {
-       width: 10vw;
+        width: 80%;
+        border-radius: .5vw;
+        font-size: 1.5vw;
+        font-family: 'Russo One', cursive;
+
       }
 
     .contactFormButton {
-      float: left;
-      margin-top: 5vh;
+      margin-top: 3vh;
       font-family: 'Carter One', cursive;
       font-size: 1.5vw;
     }
@@ -80,7 +71,7 @@ const validate = values => {
 const renderInput = ({ input, meta, label }) => 
   <div className="contactFormDiv">
   <label>{label}</label>
-  <input { ...input } />
+  <input { ...input } placeholder={label} />
   {meta.error && 
     meta.touched &&
     <span>
@@ -88,7 +79,7 @@ const renderInput = ({ input, meta, label }) =>
     </span>}
   </div>
 
-let ContactForm = ({ handleSubmit, submitting}) =>
+let ContactForm = ({ handleSubmit, submitting, label}) =>
   <ContactFormMainSection>
     <div className="bookingForm">
       <div className="contactFormHeading">
@@ -100,7 +91,6 @@ let ContactForm = ({ handleSubmit, submitting}) =>
           <Field name="phone" label="Phone Number" component={renderInput} />
           <Field name="email" label="Email" component={renderInput} />
           <Field name="cityst" label="City, St" component={renderInput} />
-          <Field name="referred" label="Referred By" component={renderInput} />
           <Field name="contactTime" label="Best Time to Contact" component={renderInput} />
         
           <button className="contactFormButton" type="submit" disabled={ submitting }>Submit</button>

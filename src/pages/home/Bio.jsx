@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const BioDiv = styled.div `
-    background: white;
+    background: black;
     min-height: 20vh;
    
 

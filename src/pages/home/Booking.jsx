@@ -2,16 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import ScrollAnimation from 'react-animate-on-scroll'
 
-import imgBG from '../../assets/hotelTrough.jpg'
 import imgBusCard from '../../assets/businessCard.jpg'
 
 import ContactForm from '../forms/ContactForm'
 
 const BookingDiv = styled.div `
     min-height: 70vh;
-    background-image: url(${imgBG});
-    background-repeat: no-repeat;
-    background-size: cover;
+    
     background-position: center;
     text-align: center;
 
@@ -38,14 +35,12 @@ const BookingDiv = styled.div `
         }
     }
 
-    .businessCard {
+    .businessCardPhoneDiv {
+        font-size: 2.5vw;
+        font-family: 'Russo One', cursive;
+        color: #000;
+        text-shadow: .2vh .2vh #fff;
     }
-
-    .contactForm {
-    }
-
-   
-
 `
 
 export const Booking = () => 
@@ -53,10 +48,13 @@ export const Booking = () =>
 <BookingDiv id="Booking">
     <div className="overlay">
         <div className="bookingGrid">
-            <ScrollAnimation delay={500} animateIn="fadeInLeft" className="bookingGridCell businessCard" >
+            <ScrollAnimation delay={500} animateIn="zoomInLeft" className="bookingGridCell businessCard" >
                 <img src={imgBusCard} alt="" />
+                <ScrollAnimation delay={1500} animateIn="tada" className="businessCardPhoneDiv">
+                    Call J. Graves @ 813 720-0783
+                </ScrollAnimation>
             </ScrollAnimation>
-            <ScrollAnimation delay={1500} animateIn="fadeInRight" className="bookingGridCell contactForm" >
+            <ScrollAnimation delay={1500} animateIn="zoomInRight" className="bookingGridCell contactForm" >
                 <ContactForm />
             </ScrollAnimation>
         </div>
