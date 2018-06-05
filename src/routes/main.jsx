@@ -3,10 +3,10 @@ import {Route} from "react-router-dom";
 
 import styled from 'styled-components'
 
-import { Login, PrivateRoute} from '../login/Login'
-import LoginHome from '../login/LoginHome'
 import NavBar from '../navbar/NavBar'
-import { Home } from '../pages/home/Home'
+import {Home} from '../pages/home/Home'
+
+import LoginHome from '../login/LoginHome'
 
 import SignUp from './SignUp'
 import SignIn from './SignIn'
@@ -60,7 +60,6 @@ class Main extends Component {
               <LoginHome />
               <NavBar />
               <Route exact path="/" component={Home} />
-              <Route path="/loginhome" component={LoginHome} />
               <Route path="/signup" component={SignUp} />
               <Route path="/signin" component={SignIn} />
               <Route path="/passwordforget" component={PasswordForget} />
@@ -73,9 +72,7 @@ class Main extends Component {
             <MobileVersion>
               Mobile Site Coming Soon
               <Route exact path="/" component={MobileHome} />
-              <Route path="/login" component={Login} />
-              <PrivateRoute path="/contactform" component={ContactForm} />
-            </MobileVersion>
+              </MobileVersion>
         );
       }
     }
