@@ -7,9 +7,10 @@ import styled from 'styled-components'
 const ContactFormMainSection = styled.section `
       
       width: 40vw;
-      height: 54vh;
+      
       margin-left: 5vw;
       margin-top: 1vh;
+      margin-bottom: 1vh;
       border-radius: 1vh;
 
       .bookingForm {

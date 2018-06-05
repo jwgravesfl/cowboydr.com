@@ -12,7 +12,6 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 const BioDiv = styled.div `
     background: rgba(0, 0, 255);
-    min-height: 100vh;
     background-image: url(${imgBG});
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,13 +24,12 @@ const BioDiv = styled.div `
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
     }
 
     .bioGrid {
         display: grid;
-        grid-template-columns: 20vh 1fr 1fr 20vh;
-        grid-template-rows: 100%;
+        grid-template-columns: 10vw 1fr 1fr 10vw;
+        grid-template-rows: auto;
     }
 
     .bioGridCells {

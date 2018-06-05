@@ -9,7 +9,6 @@ import imgQuote3 from '../../assets/pressQuote3.jpg'
 import imgQuote4 from '../../assets/pressQuote4.jpg'
 
 const PressDiv = styled.div `
-    min-height: 50vh;
     background-position: center;
     text-align: center;
 
@@ -19,14 +18,13 @@ const PressDiv = styled.div `
         top: 0;
         left: 0;
         width: 100%;
-        height: 50vh;
         text-align: center;
     }
 
     .pressGrid {
         display: grid;
-        grid-template-columns: 10vh 1fr 1fr 1fr 1fr 10vh;
-        grid-template-rows: 50vh;
+        grid-template-columns: 5vw 1fr 1fr 1fr 1fr 5vw;
+        grid-template-rows: auto;
         text-align: center;
     }
 

@@ -7,7 +7,6 @@ import imgBusCard from '../../assets/businessCard.jpg'
 import ContactForm from '../forms/ContactForm'
 
 const BookingDiv = styled.div `
-    min-height: 70vh;
     
     background-position: center;
     text-align: center;
@@ -18,7 +17,7 @@ const BookingDiv = styled.div `
     top: 0;
     left: 0;
     width: 100%;
-    height: 70vh;
+    height: 100%;
     }
 
     .bookingGrid {
