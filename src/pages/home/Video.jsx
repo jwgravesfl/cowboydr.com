@@ -35,8 +35,8 @@ export default class componentName extends Component {
     };
 
     return (
-      <VideoDiv>
-        <ScrollAnimation animateIn="fadeIn" >
+      <VideoDiv id="Demo">
+        <ScrollAnimation delay={1000} animateIn="fadeIn" >
           <YouTube
             className="youtubeFrame"
             videoId="A6pjKnkeoME"

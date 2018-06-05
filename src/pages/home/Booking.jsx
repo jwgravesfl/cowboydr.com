@@ -13,7 +13,7 @@ const BookingDiv = styled.div `
     text-align: center;
 
     .overlay {
-    background-color: rgba(197, 209, 226, .8);
+    background-color: rgba(197, 209, 226, 1);
     position: relative;
     top: 0;
     left: 0;
@@ -50,7 +50,7 @@ export const Booking = () =>
         <div className="bookingGrid">
             <ScrollAnimation delay={500} animateIn="zoomInLeft" className="bookingGridCell businessCard" >
                 <img src={imgBusCard} alt="" />
-                <ScrollAnimation delay={1500} animateIn="tada" className="businessCardPhoneDiv">
+                <ScrollAnimation delay={1500} animateIn="bounceInLeft" className="businessCardPhoneDiv">
                     Call J. Graves @ 813 720-0783
                 </ScrollAnimation>
             </ScrollAnimation>

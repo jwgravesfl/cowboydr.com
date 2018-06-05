@@ -1,24 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import imgBG from '../../assets/boardedUpTown.jpg'
+import ScrollAnimation from 'react-animate-on-scroll'
+
+import imgQuote1 from '../../assets/pressQuote1.jpg'
+import imgQuote2 from '../../assets/pressQuote2.jpg'
+import imgQuote3 from '../../assets/pressQuote3.jpg'
+import imgQuote4 from '../../assets/pressQuote4.jpg'
 
 const PressDiv = styled.div `
-    background: rgba(0, 0, 255);
     min-height: 50vh;
-    background-image: url(${imgBG});
-    background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
     text-align: center;
 
     .overlay {
-    background-color: rgba(204, 204, 204, 0.5);
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh;
+        background-color: white;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        text-align: center;
+    }
+
+    .pressGrid {
+        display: grid;
+        grid-template-columns: 10vh 1fr 1fr 1fr 1fr 10vh;
+        grid-template-rows: 50vh;
+        text-align: center;
+    }
+
+    .pressColumns {
+        text-align: center;
+
+        img {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 15%;
+        }
     }
    
 `
@@ -26,9 +45,24 @@ const PressDiv = styled.div `
 export const Press = () => 
 
 <PressDiv id="Press">
-    <div className="overlay">
+    <div className="overlay pressGrid">
         <div>
-            Press
+            
+        </div>
+        <ScrollAnimation delay={ 500 } animateIn="bounceInUp" className="pressColumns" >
+            <img src={imgQuote1} alt="" />
+        </ScrollAnimation>
+        <ScrollAnimation delay={ 1000 } animateIn="bounceInUp" className="pressColumns" >
+            <img src={imgQuote2} alt="" />
+        </ScrollAnimation>
+        <ScrollAnimation delay={ 1500 } animateIn="bounceInUp" className="pressColumns" >
+            <img src={imgQuote3} alt="" />
+        </ScrollAnimation>
+        <ScrollAnimation delay={ 2000 } animateIn="bounceInUp" className="pressColumns" >
+            <img src={imgQuote4} alt="" />
+        </ScrollAnimation>
+        <div>
+            
         </div>
     </div>
 </PressDiv>
