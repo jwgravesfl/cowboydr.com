@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "animate.css": "^3.6.1",
+    "firebase": "^5.0.4",
     "react": "^16.4.0",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.4.0",

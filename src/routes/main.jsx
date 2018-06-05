@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 import styled from 'styled-components'
 
 import { Login, PrivateRoute} from '../login/Login'
+import LoginHome from '../login/LoginHome'
 import NavBar from '../navbar/NavBar'
 import { Home } from '../pages/home/Home'
-import { Booking } from '../pages/home/Booking'
+
+import SignUp from './SignUp'
+import SignIn from './SignIn'
+import PasswordForget from './PasswordForget'
+import Account from './Account'
 
 
 import ContactForm from '../pages/forms/ContactForm'
@@ -33,6 +35,7 @@ export default class Main extends Component {
     this.state = {
       width: window.innerWidth,
     };
+
   }
   
   componentWillMount() {
@@ -52,26 +55,25 @@ export default class Main extends Component {
     
     if (!isMobile) {
         return (
-          <Router>
             <DesktopVersion>
               <NavBar />
               <Route exact path="/" component={Home} />
-              <Route path="/login" component={Login} />
-              <Route path="/booking" component={Booking} />
-              <PrivateRoute path="/contactform" component={ContactForm} />
+              <Route path="/loginhome" component={LoginHome} />
+              <Route path="/signup" component={SignUp} />
+              <Route path="/signin" component={SignIn} />
+              <Route path="/passwordforget" component={PasswordForget} />
+              <Route path="/account" component={Account} />
+              <Route path="/contactform" component={ContactForm} />
             </DesktopVersion>
-          </Router>
         );
       } else {
         return (
-          <Router>
             <MobileVersion>
               Mobile Site Coming Soon
               <Route exact path="/" component={MobileHome} />
               <Route path="/login" component={Login} />
               <PrivateRoute path="/contactform" component={ContactForm} />
             </MobileVersion>
-          </Router>
         );
       }
     }
