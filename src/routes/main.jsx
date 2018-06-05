@@ -11,7 +11,8 @@ import { Home } from '../pages/home/Home'
 import SignUp from './SignUp'
 import SignIn from './SignIn'
 import PasswordForget from './PasswordForget'
-import Account from './Account'
+import AccountPage from './Account'
+import withAuthentication from '../login/withAuthentication'
 
 
 import ContactForm from '../pages/forms/ContactForm'
@@ -29,7 +30,7 @@ const MobileVersion = styled.div `
   min-height: 100vh;
 `
 
-export default class Main extends Component {
+class Main extends Component {
   constructor() {
     super();
     this.state = {
@@ -56,13 +57,14 @@ export default class Main extends Component {
     if (!isMobile) {
         return (
             <DesktopVersion>
+              <LoginHome />
               <NavBar />
               <Route exact path="/" component={Home} />
               <Route path="/loginhome" component={LoginHome} />
               <Route path="/signup" component={SignUp} />
               <Route path="/signin" component={SignIn} />
               <Route path="/passwordforget" component={PasswordForget} />
-              <Route path="/account" component={Account} />
+              <Route path="/account" component={AccountPage} />
               <Route path="/contactform" component={ContactForm} />
             </DesktopVersion>
         );
@@ -78,3 +80,5 @@ export default class Main extends Component {
       }
     }
 }
+
+export default withAuthentication(Main)

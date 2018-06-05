@@ -1,4 +1,5 @@
 import React from 'react'
+import withAuthentication from './withAuthentication'
 
 import LoginNav from '../navbar/LoginNav'
 
@@ -8,4 +9,4 @@ const LoginHome = () =>
     <LoginNav />
 </div>
 
-export default LoginHome
+export default withAuthentication(LoginHome)

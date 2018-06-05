@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
+import { PasswordForgetLink } from './PasswordForget'
 import { SignUpLink } from './SignUp';
 import { auth } from '../firebase';
 
@@ -8,6 +9,7 @@ const SignInPage = ({ history }) =>
   <div>
     <h1>SignIn</h1>
     <SignInForm history={history} />
+    <PasswordForgetLink />
     <SignUpLink />
   </div>
 
@@ -41,7 +43,7 @@ class SignInForm extends Component {
     auth.doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState(() => ({ ...INITIAL_STATE }));
-        history.push("/contactform");
+        history.push("/");
       })
       .catch(error => {
         this.setState(byPropKey('error', error));

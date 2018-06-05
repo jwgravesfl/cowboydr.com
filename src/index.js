@@ -5,11 +5,9 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import "animate.css/animate.min.css";
 import "video-react/dist/video-react.css"
-import configureStore from './store/store';
 
+import store from './store';
 import { Provider } from 'react-redux';
-
-const store = configureStore();
 
   ReactDOM.render(
     <Provider store={store}>

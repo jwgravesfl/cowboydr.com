@@ -20,9 +20,9 @@ class App extends Component {
   render() {
     return (
       <AppMainDiv className="">
-      <Router>
-        <Main />
-      </Router>
+        <Router>
+          <Main />
+        </Router>
       </AppMainDiv>
     );
   }
