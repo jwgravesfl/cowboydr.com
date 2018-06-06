@@ -5,7 +5,7 @@ import { auth, db } from '../firebase'
 
 const SignUpPage = ({ history }) =>
   <div>
-    <h1>SignUp</h1>
+    <h1 style={{ marginTop: '15vh'}} >SignUp</h1>
     <SignUpForm history ={history} />
   </div>
 
@@ -46,7 +46,7 @@ class SignUpForm extends Component {
         db.doCreateUser(authUser.user.uid, username, email)
           .then(() => {
             this.setState(() => ({ ...INITIAL_STATE }));
-            history.push("/");
+            history.push("/userspage");
           })
           .catch(error => {
             this.setState(byPropKey('error', error));

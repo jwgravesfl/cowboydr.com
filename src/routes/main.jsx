@@ -15,7 +15,7 @@ import AccountPage from './Account'
 import withAuthentication from '../login/withAuthentication'
 
 
-import ContactForm from '../pages/forms/ContactForm'
+import UsersPage from '../admin/UsersPage'
 
 
 
@@ -64,7 +64,7 @@ class Main extends Component {
               <Route path="/signin" component={SignIn} />
               <Route path="/passwordforget" component={PasswordForget} />
               <Route path="/account" component={AccountPage} />
-              <Route path="/contactform" component={ContactForm} />
+              <Route path="/userspage" component={UsersPage} />
             </DesktopVersion>
         );
       } else {
