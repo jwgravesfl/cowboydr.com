@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import styled from 'styled-components'
 
@@ -23,16 +23,16 @@ const LoginNav = ({ authUser }) =>
 
 const LoginNavAuth = () =>
   <ul>
-    <li><Link to="/">Login Home</Link></li>
-    <li><Link to="/contactform">Contact Form</Link></li>
-    <li><Link to="/account">Account</Link></li>
+    <li><NavLink to="/">Login Home</NavLink></li>
+    <li><NavLink to="/contactform">Contact Form</NavLink></li>
+    <li><NavLink to="/account">Account</NavLink></li>
     <li><SignOutButton /></li>
   </ul>
 
    const LoginNavNonAuth = () =>
   <ul>
-    <li><Link to="/">Login Home</Link></li>
-    <li><Link to="/signin">Sign In</Link></li>
+    <li><NavLink to="/">Login Home</NavLink></li>
+    <li><NavLink to="/signin">Sign In</NavLink></li>
   </ul>
 
   const mapStateToProps = (state) => ({

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import {Route} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
+
 
 import styled from 'styled-components'
 
@@ -56,6 +57,8 @@ class Main extends Component {
     
     if (!isMobile) {
         return (
+          <Router>
+          
             <DesktopVersion>
               <LoginHome />
               <NavBar />
@@ -66,6 +69,7 @@ class Main extends Component {
               <Route path="/account" component={AccountPage} />
               <Route path="/userspage" component={UsersPage} />
             </DesktopVersion>
+          </Router>
         );
       } else {
         return (
