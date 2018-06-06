@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import AuthUserContext from '../login/AuthUserContext'
+import { connect } from 'react-redux'
+import { compose } from 'recompose'
+
 import { PasswordForgetForm } from './PasswordForget'
 import PasswordChangeForm from './PasswordChange'
 import withAuthorization from '../login/withAuthorization'
@@ -11,19 +13,22 @@ const AcountPageMainDiv = styled.div `
 `
 
 
-const AccountPage = () =>
+const AccountPage = ({ authUser }) =>
 <AcountPageMainDiv>
-  <AuthUserContext.Consumer>
-    {authUser =>
       <div>
         <h1>Account: {authUser.email}</h1>
         <PasswordForgetForm />
         <PasswordChangeForm />
       </div>
-    }
-  </AuthUserContext.Consumer>
   </AcountPageMainDiv>
+
+const mapStateToProps = (state) => ({
+  authUser: state.sessionState.authUser,
+});
   
 const authCondition = (authUser) => !!authUser;
 
-export default withAuthorization(authCondition)(AccountPage);
+export default compose(
+  withAuthorization(authCondition),
+  connect(mapStateToProps)
+)(AccountPage);

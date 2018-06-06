@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import withAuthorization from '../login/withAuthorization';
-import { db } from '../firebase';
+import { connect } from 'react-redux'
+import { compose } from 'recompose'
+
+import withAuthorization from '../login/withAuthorization'
+import { db } from '../firebase'
 
 class UsersPage extends Component {
   constructor(props) {
@@ -13,13 +16,17 @@ class UsersPage extends Component {
   }
 
   componentDidMount() {
+    const { onSetUsers } = this.props
+
     db.onceGetUsers().then(snapshot =>
-      this.setState(() => ({ users: snapshot.val() }))
+      onSetUsers(snapshot.val())
     );
   }
 
   render() {
-    const { users } = this.state;
+
+    const { users } = this.props
+
     return (
       <div style={{ marginTop: '15vh'}} >
         <h1>Users</h1>
@@ -41,6 +48,17 @@ const UserList = ({ users }) =>
     )}
   </div>
 
-const authCondition = (authUser) => !!authUser;
+const mapStateToProps = (state) => ({
+  users: state.userState.users,
+});
 
-export default withAuthorization(authCondition)(UsersPage);
+const mapDispatchToProps = (dispatch) => ({
+  onSetUsers: (users) => dispatch({ type: 'USERS_SET', users }),
+});
+
+const authCondition = (authUser) => !!authUser
+
+export default compose(
+  withAuthorization(authCondition),
+  connect(mapStateToProps, mapDispatchToProps)
+)(UsersPage)

@@ -1,9 +1,9 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import styled from 'styled-components'
 
-import AuthUserContext from '../login/AuthUserContext'
 import SignOutButton from '../components/SignOut'
 
 const LoginNavDiv = styled.div `
@@ -13,22 +13,19 @@ const LoginNavDiv = styled.div `
 `
 
 
-const LoginNav = () =>
+const LoginNav = ({ authUser }) =>
 <LoginNavDiv>
-  <AuthUserContext.Consumer>
-    {authUser => authUser
-      ? <LoginNavAuth />
-      : <LoginNavNonAuth />
-    }
-  </AuthUserContext.Consumer>
+  { authUser
+    ? <LoginNavAuth />
+    : <LoginNavNonAuth />
+  }
 </LoginNavDiv>
 
-  const LoginNavAuth = () =>
+const LoginNavAuth = () =>
   <ul>
     <li><Link to="/">Login Home</Link></li>
     <li><Link to="/contactform">Contact Form</Link></li>
     <li><Link to="/account">Account</Link></li>
-    
     <li><SignOutButton /></li>
   </ul>
 
@@ -38,4 +35,8 @@ const LoginNav = () =>
     <li><Link to="/signin">Sign In</Link></li>
   </ul>
 
-export default LoginNav
+  const mapStateToProps = (state) => ({
+    authUser: state.sessionState.authUser,
+  });
+  
+  export default connect(mapStateToProps)(LoginNav);
