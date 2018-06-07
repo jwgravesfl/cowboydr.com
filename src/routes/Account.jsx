@@ -9,6 +9,9 @@ import withAuthorization from '../login/withAuthorization'
 import styled from 'styled-components'
 
 const AcountPageMainDiv = styled.div `
+  font-family: 'Anton', sans-serif;
+  margin: 2em;
+  
 `
 
 

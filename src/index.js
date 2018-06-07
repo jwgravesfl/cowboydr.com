@@ -6,6 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 import "animate.css/animate.min.css";
 import "video-react/dist/video-react.css"
 
+
+
 import store from './store';
 import { Provider } from 'react-redux';
 

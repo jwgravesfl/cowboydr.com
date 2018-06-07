@@ -7,10 +7,19 @@ import styled from 'styled-components'
 const PWChangeDiv  = styled.div `
   width: 25vw;
   border: .2vh solid black;
+  text-align: center;
+  margin: 1em;
+  font-family: 'Anton', sans-serif;
   
+  .pwResetLabel {
+    width: 100%;
+    font-size: 2vw;
+    margin-top: .4em;
+  }
+
   .inputAndButton {
     width: 23vw;
-    margin: 1vw;
+    margin: .6em;
   }
   
 `
@@ -59,6 +68,7 @@ class PasswordChangeForm extends Component {
 
     return (
     <PWChangeDiv>
+    <div className="pwResetLabel">Change Password</div>
       <form onSubmit={this.onSubmit}>
         <input
           value={passwordOne}

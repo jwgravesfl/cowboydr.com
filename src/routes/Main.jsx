@@ -53,7 +53,7 @@ class Main extends Component {
   };
   render() {
     const { width } = this.state;
-    const isMobile = width <= 769;
+    const isMobile = width <= 600;
     
     if (!isMobile) {
         return (
@@ -72,10 +72,17 @@ class Main extends Component {
         );
       } else {
         return (
+          <Router>
             <MobileVersion>
-              Mobile Site Coming Soon
-              <Route exact path="/" component={MobileHome} />
+            <Route exact path="/" component={MobileHome} />
+            <Route path="/loginhome" component={LoginHome} />
+            <Route path="/signup" component={SignUp} />
+            <Route path="/signin" component={SignIn} />
+            <Route path="/passwordforget" component={PasswordForget} />
+            <Route path="/account" component={AccountPage} />
+            <Route path="/userspage" component={UsersPage} />
               </MobileVersion>
+          </Router>
         );
       }
     }
