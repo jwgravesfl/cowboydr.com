@@ -82,7 +82,7 @@ export default class LandingPage extends Component {
                 <ScrollAnimation className="smokin drankinSmokinraisinHellText" delay={1000} animateIn="fadeIn"> #smokin</ScrollAnimation>
               </div>
            
-              <ScrollAnimation className="raisinHell drankinSmokinraisinHellText" delay={1500} animateIn="fadeIn"> #rasinHell</ScrollAnimation>
+              <ScrollAnimation className="raisinHell drankinSmokinraisinHellText" delay={1500} animateIn="fadeIn"> #raisinHell</ScrollAnimation>
             </div> 
           </div>
         </div>

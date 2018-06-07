@@ -3,10 +3,12 @@ import { withRouter } from 'react-router-dom';
 
 import { PasswordForgetLink } from './PasswordForget'
 import { SignUpLink } from './SignUp';
+import LoginNav from '../navbar/LoginNav'
 import { auth } from '../firebase';
 
 const SignInPage = ({ history }) =>
   <div>
+    <LoginNav />
     <h1>SignIn</h1>
     <SignInForm history={history} />
     <PasswordForgetLink />
@@ -43,7 +45,7 @@ class SignInForm extends Component {
     auth.doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState(() => ({ ...INITIAL_STATE }));
-        history.push("/");
+        history.push("/account");
       })
       .catch(error => {
         this.setState(byPropKey('error', error));

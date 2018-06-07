@@ -3,8 +3,15 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { compose } from 'recompose'
 
+import styled from 'styled-components'
+
 import withAuthorization from '../login/withAuthorization'
 import { db } from '../firebase'
+import LoginNav from '../navbar/LoginNav';
+
+const UsersPageDiv = styled.div `
+  padding: 5vh;
+`
 
 class UsersPage extends Component {
   constructor(props) {
@@ -28,12 +35,13 @@ class UsersPage extends Component {
     const { users } = this.props
 
     return (
-      <div style={{ marginTop: '15vh'}} >
+      <UsersPageDiv>
+      <LoginNav />
         <h1>Users</h1>
         <p>The Users Page is accessible by every signed in user.</p>
 
         { !!users && <UserList users={users} /> }
-      </div>
+      </UsersPageDiv>
     );
   }
 }
@@ -41,10 +49,9 @@ class UsersPage extends Component {
 const UserList = ({ users }) =>
   <div>
     <h2>List of Usernames of Users</h2>
-    <p>(Saved on Sign Up in Firebase Database)</p>
-
+    
     {Object.keys(users).map(key =>
-      <div key={key}>{users[key].username}</div>
+      <div key={key} className="" >{users[key].username}</div>
     )}
   </div>
 

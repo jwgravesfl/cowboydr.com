@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 
 import { auth } from '../firebase';
 
+import styled from 'styled-components'
+
+const PWChangeDiv  = styled.div `
+  width: 25vw;
+  border: .2vh solid black;
+  
+  .inputAndButton {
+    width: 23vw;
+    margin: 1vw;
+  }
+  
+`
+
 const byPropKey = (propertyName, value) => () => ({
   [propertyName]: value,
 });
@@ -45,25 +58,33 @@ class PasswordChangeForm extends Component {
       passwordOne === '';
 
     return (
+    <PWChangeDiv>
       <form onSubmit={this.onSubmit}>
         <input
           value={passwordOne}
           onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
           type="password"
           placeholder="New Password"
+          className="inputAndButton"
         />
         <input
           value={passwordTwo}
           onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
           type="password"
           placeholder="Confirm New Password"
+          className="inputAndButton"
         />
-        <button disabled={isInvalid} type="submit">
+        <button
+          disabled={isInvalid}
+          type="submit"
+          className="inputAndButton"
+        >
           Reset My Password
         </button>
 
         { error && <p>{error.message}</p> }
       </form>
+    </PWChangeDiv>
     );
   }
 }

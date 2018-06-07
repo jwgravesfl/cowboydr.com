@@ -29,8 +29,6 @@ const BackStagePassDiv = styled.div `
       bottom: 2%;
       right: 2%;
       font-size: 1.2vw;
-
-
     }
 
 `
@@ -40,7 +38,7 @@ export default class AllAccessPass extends Component {
     return (
     
       <BackStagePassDiv>
-        <Link to="/loginhome">
+        <Link to="/account">
             
             <img src={imgPartyWagon} alt="" />
             <div className="backStage">

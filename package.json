@@ -1,12 +1,10 @@
 {
   "name": "cowboydr",
-  "homepage": "https://jwgravesfl.github.io/cowboydr.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "animate.css": "^3.6.1",
     "firebase": "^5.0.4",
-    "gh-pages": "^1.2.0",
     "react": "^16.4.0",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.4.0",
@@ -23,8 +21,6 @@
     "video-react": "^0.10.9"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

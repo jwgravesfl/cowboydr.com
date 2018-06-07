@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { auth, db } from '../firebase'
+import LoginNav from '../navbar/LoginNav';
 
 
 const SignUpPage = ({ history }) =>
   <div>
+    <LoginNav />
     <h1 style={{ marginTop: '15vh'}} >SignUp</h1>
     <SignUpForm history ={history} />
   </div>

@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { auth } from '../firebase';
+import LoginNav from '../navbar/LoginNav';
 
 const PasswordForgetPage = () =>
   <div>
+    <LoginNav />
     <h1>PasswordForget</h1>
     <PasswordForgetForm />
   </div>

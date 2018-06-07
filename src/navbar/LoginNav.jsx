@@ -7,7 +7,16 @@ import styled from 'styled-components'
 import SignOutButton from '../components/SignOut'
 
 const LoginNavDiv = styled.div `
-    
+    z-index: 9999;
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+
+    .loginNavGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+    }
 `
 
 
@@ -20,18 +29,18 @@ const LoginNav = ({ authUser }) =>
 </LoginNavDiv>
 
 const LoginNavAuth = () =>
-  <ul>
-    <li><NavLink to="/">Login Home</NavLink></li>
-    <li><NavLink to="/contactform">Contact Form</NavLink></li>
-    <li><NavLink to="/account">Account</NavLink></li>
-    <li><SignOutButton /></li>
-  </ul>
+  <div className="loginNavGrid">
+    <div className="loginNavCells"><NavLink to="/">Press Kit</NavLink></div>
+    <div className="loginNavCells"><NavLink to="/userspage">User List</NavLink></div>
+    <div className="loginNavCells"><NavLink to="/account">Account</NavLink></div>
+    <div className="loginNavCells"><SignOutButton /></div>
+  </div>
 
    const LoginNavNonAuth = () =>
-  <ul>
-    <li><NavLink to="/">Login Home</NavLink></li>
-    <li><NavLink to="/signin">Sign In</NavLink></li>
-  </ul>
+  <div className="loginNavGrid">
+    <div className="loginNavCells"><NavLink to="/">Press Kit</NavLink></div>
+    <div className="loginNavCells"><NavLink to="/signin">Sign In</NavLink></div>
+  </div>
 
   const mapStateToProps = (state) => ({
     authUser: state.sessionState.authUser,
