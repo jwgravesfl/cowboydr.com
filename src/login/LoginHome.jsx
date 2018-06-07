@@ -7,6 +7,7 @@ const LoginHome = () =>
 
 <div>
     <LoginNav />
+    
 </div>
 
 export default withAuthentication(LoginHome)

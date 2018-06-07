@@ -6,11 +6,12 @@ import {Booking} from './Booking'
 import Video from './Video'
 import { Bio } from './Bio'
 import { Press } from './Press'
+import NavBar from '../../navbar/NavBar'
+import AllAccessPass from './AllAccessPass'
+
 
 
 const HomeDiv = styled.div `
-    min-height: '100vh',
-
 
 `
 
@@ -22,4 +23,6 @@ export const Home = () =>
         <Video />
         <Bio />
         <Press />
+        <AllAccessPass />
+        <NavBar />
     </HomeDiv>;

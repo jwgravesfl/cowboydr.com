@@ -7,9 +7,7 @@ import styled from 'styled-components'
 import SignOutButton from '../components/SignOut'
 
 const LoginNavDiv = styled.div `
-    position: fixed;
-    top: 1vh;
-    left: 1vh;
+    
 `
 
 

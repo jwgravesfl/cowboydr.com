@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 
 import styled from 'styled-components'
 
-import NavBar from '../navbar/NavBar'
+
 import {Home} from '../pages/home/Home'
 
 import LoginHome from '../login/LoginHome'
@@ -60,9 +60,8 @@ class Main extends Component {
           <Router>
           
             <DesktopVersion>
-              <LoginHome />
-              <NavBar />
               <Route exact path="/" component={Home} />
+              <Route path="/loginhome" component={LoginHome} />
               <Route path="/signup" component={SignUp} />
               <Route path="/signin" component={SignIn} />
               <Route path="/passwordforget" component={PasswordForget} />
