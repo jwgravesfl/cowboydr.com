@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 import MobileNavBar from './mobnavbar/MobileNavBar'
-
 import MobileLandingPage from './pages/MobileLandingPage'
+import {MobileBooking} from './pages/MobileBooking'
 
 import styled from 'styled-components'
 
@@ -21,10 +21,11 @@ export default class MobileHome extends Component {
     return (
       <MobileHomeMainDiv>
         <MobileLandingPage />
+        <MobileBooking />
         <MobileNavBar /> 
-    
-      {/*  
-        <Booking />
+       
+      
+        {/*  
         <Video />
         <Bio />
         <Press />
