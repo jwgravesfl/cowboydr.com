@@ -7,8 +7,6 @@ import imgBusCard from '../../../../assets/businessCard.jpg'
 import ContactForm from '../../../forms/ContactForm'
 
 const MobileBookingDiv = styled.div `
-    
-    background-position: center;
     text-align: center;
 
     .overlay {
@@ -21,24 +19,27 @@ const MobileBookingDiv = styled.div `
     }
 
     .bookingGrid {
-        display: grid;
-        grid-template-columns: auto auto;
-  
+      
     }
 
     .bookingGridCell {
-        width: 50vw;
+        
         img {
-            padding: 7vh 0;
+            padding: 4vh 0;
             width: 75%;
         }
     }
 
     .businessCardPhoneDiv {
-        font-size: 2.5vw;
+        font-size: 6vw;
         font-family: 'Russo One', cursive;
         color: #000;
-        text-shadow: .2vh .2vh #fff;
+        text-shadow: .6vw .6vw #fff;
+        margin-bottom: 2vh;
+    }
+
+    .contactForm {
+        text-align: center;
     }
 `
 

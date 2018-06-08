@@ -6,62 +6,7 @@ import styled from 'styled-components'
 
 const ContactFormMainSection = styled.section `
       
-      width: 40vw;
       
-      margin-left: 5vw;
-      margin-top: 1vh;
-      margin-bottom: 1vh;
-      border-radius: 1vh;
-
-      .bookingForm {
-        width: 100%;
-        height: 100%;
-      }
-
-      .contactFormFormBody {
-        padding-bottom: 2.5vh;
-      }
-
-      form {
-        
-      }
-
-      .contactFormHeading {
-        text-align: center;
-        font-family: 'Carter One', cursive;
-        font-size: 2vw;
-      }
-
-      label {
-        display: block;
-        padding-top: 1vh;
-        font-family: 'Carter One', cursive;
-        font-size: 1.5vw;
-        text-align: left;
-      }
-
-      input {
-        width: 80%;
-        border-radius: .5vw;
-        font-size: 1.5vw;
-        font-family: 'Russo One', cursive;
-
-      }
-
-    .contactFormButton {
-      margin-top: 3vh;
-      font-family: 'Carter One', cursive;
-      font-size: 1.5vw;
-    }
-
-    @media screen and (max-width: 600px) {
-
-      width: auto;
-      margin-left: auto;
-      margin-top: auto;
-      margin-bottom: auto;
-      border-radius: auto;
-
       .bookingForm {
         width: 100%;
         height: 100%;
@@ -101,9 +46,8 @@ const ContactFormMainSection = styled.section `
     .contactFormButton {
       margin-top: 3vh;
       font-family: 'Carter One', cursive;
-      font-size: 5vw;
+      font-size: 1.5vw;
     }
-  }
 `
 
 const validate = values => {

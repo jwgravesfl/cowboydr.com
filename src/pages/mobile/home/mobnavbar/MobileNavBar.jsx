@@ -12,6 +12,7 @@ const MobileNavBarDiv = styled.div `
         right: 1em;
         z-index: 9999;
         font-size: 2em;
+        color: white;
     }
 
     .navMenuGrid {

@@ -6,7 +6,7 @@ import imgBG from '../../../../assets/waterTown1Mobile.jpg'
 import logo from '../../../../assets/421CDLogo.png'
 
 const MobileLandingPageDiv = styled.div `
-        height: 100vh;
+        height: 100%;
         background-image: url(${imgBG});
         background-repeat: no-repeat;
         background-size: cover;
@@ -20,7 +20,7 @@ const MobileLandingPageDiv = styled.div `
 
       img {
         width: 100%;
-        margin-top: 20vh;
+        margin-top: 15vh;
         margin-bottom: 5vh;
       }
     }
