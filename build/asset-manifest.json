@@ -1,8 +1,8 @@
 {
   "main.css": "static/css/main.57ce03c9.css",
   "main.css.map": "static/css/main.57ce03c9.css.map",
-  "main.js": "static/js/main.dff2d193.js",
-  "main.js.map": "static/js/main.dff2d193.js.map",
+  "main.js": "static/js/main.d9fc0d6c.js",
+  "main.js.map": "static/js/main.d9fc0d6c.js.map",
   "static\\media\\421CDLogo.png": "static/media/421CDLogo.16dde5d6.png",
   "static\\media\\Untitled-1-01.png": "static/media/Untitled-1-01.09dc9269.png",
   "static\\media\\bunniProfilePic.jpg": "static/media/bunniProfilePic.a9ee1fcf.jpg",
@@ -15,5 +15,6 @@
   "static\\media\\pressQuote4.jpg": "static/media/pressQuote4.a7f8759e.jpg",
   "static\\media\\roughneckProfilePic.jpg": "static/media/roughneckProfilePic.0bf2c3e3.jpg",
   "static\\media\\saloon.jpg": "static/media/saloon.f34f3dc0.jpg",
-  "static\\media\\waterTown1.jpg": "static/media/waterTown1.586c9c07.jpg"
+  "static\\media\\waterTown1.jpg": "static/media/waterTown1.586c9c07.jpg",
+  "static\\media\\waterTown1Mobile.jpg": "static/media/waterTown1Mobile.e98562dd.jpg"
 }
