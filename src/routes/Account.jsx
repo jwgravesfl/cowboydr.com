@@ -10,7 +10,8 @@ import styled from 'styled-components'
 
 const AcountPageMainDiv = styled.div `
   font-family: 'Anton', sans-serif;
-  margin: 2em;
+  padding: 2em;
+  min-height: 100vh;
   
 `
 

@@ -24,7 +24,7 @@ import UsersPage from '../admin/UsersPage'
 import MobileHome from '../pages/mobile/home/MobileHome'
 
 const DesktopVersion = styled.div `
-
+      background: #3e4f5b;
 `
 
 const MobileVersion = styled.div `

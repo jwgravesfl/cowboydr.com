@@ -12,6 +12,7 @@ import Main from './routes/Main'
 const AppMainDiv = styled.div `
   padding: 0;
   margin: 0;
+  
 
       
 `
