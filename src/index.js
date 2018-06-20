@@ -11,6 +11,8 @@ import "video-react/dist/video-react.css"
 import store from './store';
 import { Provider } from 'react-redux';
 
+console.log(store.getState())
+
   ReactDOM.render(
     <Provider store={store}>
       <App />

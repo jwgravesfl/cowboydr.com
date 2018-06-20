@@ -19,6 +19,7 @@ class UsersPage extends Component {
 
     this.state = {
       users: null,
+      
     }
   }
 
@@ -30,8 +31,11 @@ class UsersPage extends Component {
     );
   }
 
+
+  
   render() {
 
+    console.log(this.state)
     const { users } = this.props
 
     return (
