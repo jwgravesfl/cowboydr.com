@@ -20,7 +20,7 @@ const LandingPageDiv = styled.div `
 
       img {
         width: 45vw;
-        margin-top: 20vh;
+        margin-top: 25vh;
         margin-left: 8vw;
       }
     }

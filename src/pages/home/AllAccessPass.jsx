@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 
-import imgPartyWagon from '../../assets/Untitled-1-01.png'
+import imgPartyWagon from '../../assets/BandWagonLogo.png'
 
 import styled from 'styled-components'
 
@@ -17,7 +17,7 @@ const BackStagePassDiv = styled.div `
       a:active  {
         text-decoration:  none;
         font-weight:      bold;
-        color: black;
+        color: white;
         }
 
       img {
@@ -26,9 +26,11 @@ const BackStagePassDiv = styled.div `
 
     .backStage {
       position: absolute;
-      bottom: 2%;
-      right: 2%;
+      bottom: 22%;
+      right: 25%;
       font-size: 1.2vw;
+      border: white solid 1px;
+      background: grey;
     }
 
 `
@@ -43,12 +45,9 @@ export default class AllAccessPass extends Component {
             <img src={imgPartyWagon} alt="" />
             <div className="backStage">
               <div>
-                Click Here for
+                Click Here!
               </div>
-              <div>
-                VIP All Access Pass!
               </div>
-            </div>
         </Link>    
       </BackStagePassDiv>
 
