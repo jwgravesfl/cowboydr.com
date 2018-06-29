@@ -4,7 +4,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 import imgBusCard from '../../../../assets/businessCard.jpg'
 
-import ContactForm from '../../../forms/ContactForm'
+import SignUp from '../../../../routes/SignUp'
 
 const MobileBookingDiv = styled.div `
     text-align: center;
@@ -55,7 +55,7 @@ export const MobileBooking = () =>
                 </ScrollAnimation>
             </ScrollAnimation>
             <ScrollAnimation delay={1500} animateIn="zoomInRight" className="bookingGridCell contactForm" >
-                <ContactForm />
+                <SignUp />
             </ScrollAnimation>
         </div>
     </div>

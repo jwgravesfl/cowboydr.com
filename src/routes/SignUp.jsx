@@ -1,21 +1,39 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { auth, db } from '../firebase'
-import LoginNav from '../navbar/LoginNav';
 
+import styled from 'styled-components'
+
+const SignUpDiv = styled.div `
+    background: green;
+    min-height: 50vh;
+
+    .signUpPageFormLabel {
+      font-size: 3vw;
+
+    }
+
+    .signUpInput {
+      padding: 1vw;
+      margin: 1vw;
+      width: 15vw;
+    }
+`
 
 const SignUpPage = ({ history }) =>
-  <div>
-    <LoginNav />
-    <h1 style={{ marginTop: '15vh'}} >SignUp</h1>
+  <SignUpDiv>
+    <div className="signUpPageFormLabel">Cowboy Drive<hr /> Booking Information</div>
     <SignUpForm history ={history} />
-  </div>
+  </SignUpDiv>
 
 const INITIAL_STATE = {
   username: '',
-  email: '',
   passwordOne: '',
   passwordTwo: '',
+  name: '',
+  email: '',
+  phone: '',
+  bestTime: '',
   error: null,
 };
 
@@ -35,6 +53,9 @@ class SignUpForm extends Component {
       username,
       email,
       passwordOne,
+      name,
+      phone,
+      bestTime
     } = this.state
 
   const {
@@ -45,7 +66,7 @@ class SignUpForm extends Component {
       .then(authUser => {
 
         // Create a user in your own accessible Firebase Database too
-        db.doCreateUser(authUser.user.uid, username, email)
+        db.doCreateUser(authUser.user.uid, username, name, email, phone, bestTime)
           .then(() => {
             this.setState(() => ({ ...INITIAL_STATE }));
             history.push("/account");
@@ -65,9 +86,12 @@ class SignUpForm extends Component {
   render() {
     const {
       username,
-      email,
       passwordOne,
       passwordTwo,
+      name,
+      email,
+      phone,
+      bestTime,
       error,
     } = this.state
 
@@ -75,37 +99,59 @@ class SignUpForm extends Component {
       passwordOne !== passwordTwo ||
       passwordOne === '' ||
       email === '' ||
-      username === ''
+      username === '' ||
+      name === ''
 
     return (
       <form onSubmit={this.onSubmit}>
-      <input
-        value={username}
-        onChange={event => this.setState(byPropKey('username', event.target.value))}
-        type="text"
-        placeholder="Full Name"
-      />
+
       <input
         value={email}
         onChange={event => this.setState(byPropKey('email', event.target.value))}
         type="text"
         placeholder="Email Address"
+        className="signUpInput"
       />
       <input
         value={passwordOne}
         onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
         type="password"
         placeholder="Password"
+        className="signUpInput"
       />
       <input
         value={passwordTwo}
         onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
         type="password"
         placeholder="Confirm Password"
+        className="signUpInput"
       />
+      <input
+        value={name}
+        onChange={event => this.setState(byPropKey('name', event.target.value))}
+        type="text"
+        placeholder="Name"
+        className="signUpInput"
+      />
+      <input
+        value={phone}
+        onChange={event => this.setState(byPropKey('phone', event.target.value))}
+        type="phone"
+        placeholder="Phone Number"
+        className="signUpInput"
+      />
+      <input
+        value={bestTime}
+        onChange={event => this.setState(byPropKey('bestTime', event.target.value))}
+        type="bestTime"
+        placeholder="Best Time to Call"
+        className="signUpInput"
+      />
+      <div className="signUpSubmitButton">
       <button disabled={isInvalid} type="submit">
         Sign Up
       </button>
+      </div>
 
       { error && <p>{error.message}</p> }
       </form>
