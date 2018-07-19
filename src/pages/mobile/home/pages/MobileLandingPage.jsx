@@ -74,8 +74,6 @@ export default class MobileLandingPage extends Component {
             
             <div className="dsrDiv">
               <div className="smokinDrankinGrid">
-                <ScrollAnimation className="drankin drankinSmokinraisinHellText" delay={500} animateIn="fadeIn"> #drankin</ScrollAnimation>
-                <ScrollAnimation className="smokin drankinSmokinraisinHellText" delay={1000} animateIn="fadeIn"> #smokin</ScrollAnimation>
                 <ScrollAnimation className="raisinHell drankinSmokinraisinHellText" delay={1500} animateIn="fadeIn"> #raisinHell</ScrollAnimation>
               </div>
             </div> 
