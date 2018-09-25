@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import {BrowserRouter as Router, Route} from "react-router-dom";
-
+import { Route, BrowserRouter, Switch } from 'react-router-dom'
 
 import styled from 'styled-components'
 
@@ -57,9 +56,10 @@ class Main extends Component {
     
     if (!isMobile) {
         return (
-          <Router>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
           
             <DesktopVersion>
+            <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/loginhome" component={LoginHome} />
               <Route path="/signup" component={SignUp} />
@@ -67,13 +67,15 @@ class Main extends Component {
               <Route path="/passwordforget" component={PasswordForget} />
               <Route path="/account" component={AccountPage} />
               <Route path="/userspage" component={UsersPage} />
+              </Switch>
             </DesktopVersion>
-          </Router>
+          </BrowserRouter>
         );
       } else {
         return (
-          <Router>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <MobileVersion>
+            <Switch>
             <Route exact path="/" component={MobileHome} />
             <Route path="/loginhome" component={LoginHome} />
             <Route path="/signup" component={SignUp} />
@@ -81,8 +83,9 @@ class Main extends Component {
             <Route path="/passwordforget" component={PasswordForget} />
             <Route path="/account" component={AccountPage} />
             <Route path="/userspage" component={UsersPage} />
+            </Switch>
               </MobileVersion>
-          </Router>
+          </BrowserRouter>
         );
       }
     }
